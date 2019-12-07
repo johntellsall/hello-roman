@@ -1,12 +1,15 @@
 # from https://simpleisbetterthancomplex.com/article/2017/08/07/a-minimal-django-application.html
 # 
+from django.conf.urls import url
 from django.http import HttpResponse
 
 DEBUG = True
-SECRET_KEY = '4l0ngs3cr3tstr1ngw3lln0ts0l0ngw41tn0w1tsl0ng3n0ugh'
+SECRET_KEY = 'e5443ba7add3095e83ac6aee14f62734'
 ROOT_URLCONF = __name__
 
 def home(request):
     return HttpResponse('Welcome to the Tinyapp\'s Homepage!')
 
-urlpatterns = []
+urlpatterns = [
+    url(r'^$', home),
+]
