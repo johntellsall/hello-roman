@@ -1,3 +1,5 @@
+RUN := docker-compose run web 
+
 all:
 
 # list -- list all files in project
@@ -8,3 +10,8 @@ list:
 up:
 	docker-compose up
 
+test:
+	docker-compose run web ./manage.py test
+
+tiny:
+	$(RUN) django-admin runserver --pythonpath=. --settings=tinyapp 0.0.0.0:8000
