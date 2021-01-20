@@ -10,8 +10,17 @@ list:
 up:
 	docker-compose up
 
+shell:
+	docker-compose run web bash
+
 test:
 	docker-compose run web ./manage.py test
 
-tiny:
-	$(RUN) django-admin runserver --pythonpath=. --settings=tinyapp 0.0.0.0:8000
+# tiny:
+# 	$(RUN) django-admin runserver --pythonpath=. --settings=tinyapp 0.0.0.0:8000
+
+cycle-tests:
+	while true \
+	; do tput bold ; date ; tput sgr0 \
+	; ./manage.py test ; sleep 10 \
+	; done

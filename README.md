@@ -12,4 +12,6 @@ TODO: install Ripgrep
 
 * mount volume from host correctly (vs editing Docker preference)
 
+* fix Vscode flagging correctly-installed modules
+
 
