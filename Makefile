@@ -16,8 +16,9 @@ shell:
 test:
 	docker-compose run web ./manage.py test
 
-# tiny:
-# 	$(RUN) django-admin runserver --pythonpath=. --settings=tinyapp 0.0.0.0:8000
+local:
+	django-admin runserver --pythonpath=. --settings=tinyapp
+	# $(RUN) django-admin runserver --pythonpath=. --settings=tinyapp 0.0.0.0:8000
 
 cycle-tests:
 	while true \

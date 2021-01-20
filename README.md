@@ -14,4 +14,4 @@ TODO: install Ripgrep
 
 * fix Vscode flagging correctly-installed modules
 
-
+* add Black?
