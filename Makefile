@@ -13,6 +13,10 @@ up:
 shell:
 	docker-compose run web bash
 
+setup:
+	python3 -m pip install --upgrade pip
+	python3 -m pip install -r ./requirements.txt
+	
 lint:
 	python3 -m flake8 $$(git ls-files '*.py')
 
