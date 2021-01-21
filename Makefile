@@ -13,12 +13,14 @@ up:
 shell:
 	docker-compose run web bash
 
+lint:
+	flake8 $$(git ls-files '*.py')
+
 test:
 	docker-compose run web ./manage.py test
 
-local:
-	django-admin runserver --pythonpath=. --settings=tinyapp
-	# $(RUN) django-admin runserver --pythonpath=. --settings=tinyapp 0.0.0.0:8000
+# local:
+# 	django-admin runserver --pythonpath=. --settings=tinyapp
 
 cycle-tests:
 	while true \
