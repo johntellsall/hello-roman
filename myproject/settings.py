@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "myapp"
+    "myapp",
 ]
 
 MIDDLEWARE = [
@@ -37,6 +37,14 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+MIGRATION_MODULES = {
+    "admin": None,
+    "auth": None,
+    "contenttypes": None,
+    "profiles": None,
+    "sessions": None,
+}
 
 ROOT_URLCONF = "myproject.urls"
 
