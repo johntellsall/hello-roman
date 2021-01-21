@@ -1,7 +1,6 @@
 Django==3.1.5
 # later: psycopg2==2.8.6
 # dev:
-pytest==6.2.1
-flake8
-ipdb
+# pytest==6.2.1
 black
+flake8
