@@ -14,7 +14,7 @@ shell:
 	docker-compose run web bash
 
 lint:
-	flake8 $$(git ls-files '*.py')
+	python3 -m flake8 $$(git ls-files '*.py')
 
 test:
 	./manage.py test -v2
