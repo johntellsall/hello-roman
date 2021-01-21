@@ -17,7 +17,7 @@ lint:
 	flake8 $$(git ls-files '*.py')
 
 test:
-	docker-compose run web ./manage.py test
+	./manage.py test
 
 # local:
 # 	django-admin runserver --pythonpath=. --settings=tinyapp
