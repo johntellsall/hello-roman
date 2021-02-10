@@ -29,5 +29,5 @@ test:
 cycle-tests:
 	while true \
 	; do tput bold ; date ; tput sgr0 \
-	; ./manage.py test ; sleep 10 \
+	; make test ; sleep 10 \
 	; done
