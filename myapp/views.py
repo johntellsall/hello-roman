@@ -1,7 +1,10 @@
 from django.http import HttpResponse
 
-# from django.shortcuts import render
+
+def get_value():
+    return 123
 
 
 def homePageView(request):
-    return HttpResponse("Hello, 823!")
+    value = get_value()
+    return HttpResponse(f"Hello, {value}!")
