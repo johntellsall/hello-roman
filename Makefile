@@ -21,7 +21,7 @@ lint:
 	python3 -m flake8 $$(git ls-files '*.py')
 
 test:
-	python3 ./manage.py test -v2
+	pytest -v
 
 # local:
 # 	django-admin runserver --pythonpath=. --settings=tinyapp
